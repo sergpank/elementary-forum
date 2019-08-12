@@ -20,6 +20,11 @@
     <servlet-class>org.elementary.forum.servlets.TopicsServlet</servlet-class>
   </servlet>
 
+  <servlet>
+    <servlet-name>ban</servlet-name>
+    <servlet-class>org.elementary.forum.servlets.BanServlet</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>simple</servlet-name>
     <url-pattern>/test</url-pattern>
@@ -34,5 +39,11 @@
     <servlet-name>topics</servlet-name>
     <url-pattern>/topics</url-pattern>
   </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>ban</servlet-name>
+    <url-pattern>/ban</url-pattern>
+  </servlet-mapping>
+
 
 </web-app>

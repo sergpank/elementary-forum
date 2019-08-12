@@ -3,6 +3,7 @@ package org.elementary.forum.dao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import org.elementary.forum.entites.Ban;
 import org.elementary.forum.entites.Post;
 import org.elementary.forum.entites.Topic;
 import org.elementary.forum.entites.User;
@@ -27,6 +28,7 @@ public class HibernateUtil
         configuration.addAnnotatedClass(User.class);
         configuration.addAnnotatedClass(Post.class);
         configuration.addAnnotatedClass(Topic.class);
+        configuration.addAnnotatedClass(Ban.class);
 
         StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
             .applySettings(configuration.getProperties());

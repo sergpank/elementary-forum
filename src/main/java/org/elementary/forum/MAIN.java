@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.elementary.forum.dao.BanDao;
 import org.elementary.forum.dao.TopicDao;
 import org.elementary.forum.dao.UserDao;
+import org.elementary.forum.entites.Ban;
 import org.elementary.forum.entites.Post;
 import org.elementary.forum.entites.Topic;
 import org.elementary.forum.entites.User;
@@ -16,6 +18,7 @@ public class MAIN
   {
     UserDao userDao = new UserDao();
     TopicDao topicDao = new TopicDao();
+    BanDao banDao = new BanDao();
 
     for (int i = 1; i <=5; i++)
     {
@@ -49,7 +52,10 @@ public class MAIN
 
       topicDao.save(topic);
     }
-
-    topicDao.loadAll().forEach(System.out::println);
+    Ban ban = new Ban("user-3", "spam");
+    banDao.save(ban);
+    ban = new Ban("user-2", "retard");
+    banDao.save(ban);
   }
+
 }
