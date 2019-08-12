@@ -35,4 +35,14 @@
     <url-pattern>/topics</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>reg</servlet-name>
+    <servlet-class>org.elementary.forum.servlets.RegServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>reg</servlet-name>
+    <url-pattern>/registration</url-pattern>
+  </servlet-mapping>
+
 </web-app>
