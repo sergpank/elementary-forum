@@ -12,7 +12,7 @@ public class CreatePostServlet extends HttpServlet
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
   {
-    RequestDispatcher view = req.getRequestDispatcher("postcreate.jsp");
+    RequestDispatcher view = req.getRequestDispatcher("/pages/createPost.jsp");
     view.forward(req, resp);
   }
 }

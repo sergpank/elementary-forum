@@ -14,7 +14,9 @@ public class MAIN
 {
   public static void main(String[] args)
   {
-    UserDao userDao = new UserDao();
+
+
+      UserDao userDao = new UserDao();
     TopicDao topicDao = new TopicDao();
 
     for (int i = 1; i <=5; i++)
@@ -51,5 +53,10 @@ public class MAIN
     }
 
     topicDao.loadAll().forEach(System.out::println);
+
+    Topic topic = topicDao.getById(1);
+
+    System.out.println(topic);
+
   }
 }
