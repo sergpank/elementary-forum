@@ -15,5 +15,5 @@ public class CreatePostServlet extends HttpServlet
     RequestDispatcher view = req.getRequestDispatcher("postcreate.jsp");
     view.forward(req,resp);
 
-  }
+
 }
