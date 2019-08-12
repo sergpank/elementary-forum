@@ -15,10 +15,10 @@
 
         <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://45.88.78.250:3306/forumdb</property>
+        <property name="hibernate.connection.url">jdbc:mysql://46.101.187.75:3306/test1</property>
 
-        <property name="connection.username">forum</property>
-        <property name="connection.password">forum</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">root</property>
 
         <!-- SQL DIALECT -->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL57Dialect</property>
