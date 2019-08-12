@@ -13,7 +13,6 @@ public class CreatePostServlet extends HttpServlet
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
   {
     RequestDispatcher view = req.getRequestDispatcher("postcreate.jsp");
-    view.forward(req,resp);
-
-
+    view.forward(req, resp);
+  }
 }
