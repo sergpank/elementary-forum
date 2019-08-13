@@ -42,7 +42,7 @@
 
   <servlet-mapping>
     <servlet-name>createPost</servlet-name>
-    <url-pattern>/createPost</url-pattern>
+    <url-pattern>/pages/createPost</url-pattern>
   </servlet-mapping>
 
 </web-app>
