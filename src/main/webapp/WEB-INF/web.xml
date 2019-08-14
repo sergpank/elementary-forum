@@ -21,13 +21,13 @@
   </servlet>
 
   <servlet>
-<<<<<<< HEAD
     <servlet-name>createPost</servlet-name>
     <servlet-class>org.elementary.forum.servlets.CreatePostServlet</servlet-class>
-=======
+  </servlet>
+
+  <servlet>
     <servlet-name>newTopic</servlet-name>
     <servlet-class>org.elementary.forum.servlets.NewTopicCreatorServlet</servlet-class>
->>>>>>> createNewTopic
   </servlet>
 
   <servlet-mapping>
@@ -44,16 +44,12 @@
     <servlet-name>topics</servlet-name>
     <url-pattern>/topics</url-pattern>
   </servlet-mapping>
-
   <servlet-mapping>
-<<<<<<< HEAD
     <servlet-name>createPost</servlet-name>
     <url-pattern>/pages/createPost</url-pattern>
   </servlet-mapping>
-
-=======
+  <servlet-mapping>
     <servlet-name>newTopic</servlet-name>
     <url-pattern>/new_topic</url-pattern>
   </servlet-mapping>
->>>>>>> createNewTopic
 </web-app>
