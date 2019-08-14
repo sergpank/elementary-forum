@@ -20,6 +20,11 @@
     <servlet-class>org.elementary.forum.servlets.TopicsServlet</servlet-class>
   </servlet>
 
+  <servlet>
+    <servlet-name>newTopic</servlet-name>
+    <servlet-class>org.elementary.forum.servlets.NewTopicCreatorServlet</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>simple</servlet-name>
     <url-pattern>/test</url-pattern>
@@ -35,4 +40,8 @@
     <url-pattern>/topics</url-pattern>
   </servlet-mapping>
 
+  <servlet-mapping>
+    <servlet-name>newTopic</servlet-name>
+    <url-pattern>/new_topic</url-pattern>
+  </servlet-mapping>
 </web-app>
