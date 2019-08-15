@@ -15,7 +15,7 @@
 
         <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://46.101.187.75:3306/azhuravlov</property>
+        <property name="hibernate.connection.url">jdbc:mysql://46.101.187.75:3306/spanko</property>
 
         <property name="connection.username">root</property>
         <property name="connection.password">root</property>
