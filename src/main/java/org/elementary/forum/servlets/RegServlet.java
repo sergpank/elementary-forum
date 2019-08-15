@@ -1,6 +1,7 @@
 package org.elementary.forum.servlets;
 
 import org.elementary.forum.dao.UserDao;
+import org.elementary.forum.entites.Post;
 import org.elementary.forum.entites.User;
 
 import javax.servlet.RequestDispatcher;
@@ -25,6 +26,6 @@ public class RegServlet extends HttpServlet {
         user.setRegistrationDate(new Date());
         UserDao userDao = new UserDao();
         //userDao.save(user);
-        System.out.println(userDao.getByLogin("Barsa"));
+        
     }
 }

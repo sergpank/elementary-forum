@@ -5,6 +5,7 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.CriteriaQuery;
+import org.hibernate.criterion.Restrictions;
 
 
 import javax.persistence.Query;
@@ -30,12 +31,9 @@ public class UserDao
     SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
     Session session = sessionFactory.openSession();
 
-    CriteriaBuilder cb = session.getCriteriaBuilder();
-    javax.persistence.criteria.CriteriaQuery<User> cq = cb.createQuery(User.class);
-    Root<User> root = cq.from(User.class);
-    Query query = session.createQuery(cq);
-
-    List<User> users = query.getResultList() ;
+    Criteria crit = session.createCriteria(User.class);
+    crit.add(Restrictions.eq("login",login));
+    List<User> users = crit.list();
     session.close();
 
     return users;
