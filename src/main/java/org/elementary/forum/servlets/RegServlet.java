@@ -24,7 +24,7 @@ public class RegServlet extends HttpServlet {
         user.setPassword(password);
         user.setRegistrationDate(new Date());
         UserDao userDao = new UserDao();
-        userDao.save(user);
-        System.out.println(name + "  " + password);
+        //userDao.save(user);
+        System.out.println(userDao.getByLogin("Barsa"));
     }
 }

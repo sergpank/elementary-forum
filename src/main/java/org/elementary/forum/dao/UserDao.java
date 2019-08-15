@@ -4,7 +4,13 @@ import org.elementary.forum.entites.User;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.CriteriaQuery;
 
+
+import javax.persistence.Query;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
 import java.util.List;
 
 public class UserDao
@@ -18,6 +24,21 @@ public class UserDao
     session.close();
 
     return user;
+  }
+  public List<User> getByLogin(String login)
+  {
+    SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+    Session session = sessionFactory.openSession();
+
+    CriteriaBuilder cb = session.getCriteriaBuilder();
+    javax.persistence.criteria.CriteriaQuery<User> cq = cb.createQuery(User.class);
+    Root<User> root = cq.from(User.class);
+    Query query = session.createQuery(cq);
+
+    List<User> users = query.getResultList() ;
+    session.close();
+
+    return users;
   }
 
   public User save(User user)
