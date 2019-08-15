@@ -25,6 +25,7 @@ public class CookieDemo extends HttpServlet
         if (findUserIdCookie(request.getCookies()) == null)
         {
             Cookie userId = new Cookie(USER_ID, "Vasya_" + formatter.format(new Date()));
+            userId.setMaxAge(5);
             response.addCookie(userId);
         }
 
