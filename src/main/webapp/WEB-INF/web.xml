@@ -5,6 +5,16 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
+    <servlet>
+        <servlet-name>sessionDemo</servlet-name>
+        <servlet-class>org.elementary.forum.servlets.SessionDemo</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>cookieDemo</servlet-name>
+        <servlet-class>org.elementary.forum.servlets.CookieDemo</servlet-class>
+    </servlet>
+
   <servlet>
     <servlet-name>simple</servlet-name>
     <servlet-class>org.elementary.forum.SimpleServlet</servlet-class>
@@ -52,4 +62,13 @@
     <servlet-name>newTopic</servlet-name>
     <url-pattern>/new_topic</url-pattern>
   </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>sessionDemo</servlet-name>
+        <url-pattern>/demo/sessionDemo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>cookieDemo</servlet-name>
+        <url-pattern>/demo/cookieDemo</url-pattern>
+    </servlet-mapping>
 </web-app>

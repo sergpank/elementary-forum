@@ -3,6 +3,7 @@ package org.elementary.forum.dao;
 import org.elementary.forum.entites.Topic;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 
 import java.util.List;
 
@@ -24,12 +25,13 @@ public class TopicDao
     SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
     Session session = sessionFactory.openSession();
 
-    session.beginTransaction();
+    Transaction transaction = session.getTransaction();
 
     // SAVE HERE
     session.save(topic);
 
-    session.getTransaction().commit();
+    transaction.commit();
+
     session.close();
 
     return topic;
