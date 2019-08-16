@@ -5,6 +5,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TopicDao
@@ -26,6 +27,7 @@ public class TopicDao
     Session session = sessionFactory.openSession();
 
     Transaction transaction = session.getTransaction();
+    transaction.begin();
 
     // SAVE HERE
     session.save(topic);
@@ -46,5 +48,23 @@ public class TopicDao
     session.close();
 
     return topics;
+  }
+
+  public List<Topic> getByAuthorId(long authorId)
+  {
+    List<Topic> topicList=new ArrayList<>();
+    SessionFactory sessionFactory=HibernateUtil.getSessionFactory();
+    Session session=sessionFactory.openSession();
+    Transaction transaction=session.getTransaction();
+    transaction.begin();
+
+    topicList = session.createQuery("select t from Topic as t where t.author.id= :authorId")
+        .setParameter("authorId", authorId)
+        .list();
+
+    transaction.commit();
+    session.close();
+
+    return topicList;
   }
 }

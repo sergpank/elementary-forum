@@ -40,6 +40,11 @@
     <servlet-class>org.elementary.forum.servlets.NewTopicCreatorServlet</servlet-class>
   </servlet>
 
+  <servlet>
+    <servlet-name>userTopicServlet</servlet-name>
+    <servlet-class>org.elementary.forum.servlets.UserTopicServlet</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>simple</servlet-name>
     <url-pattern>/test</url-pattern>
@@ -71,4 +76,8 @@
         <servlet-name>cookieDemo</servlet-name>
         <url-pattern>/demo/cookieDemo</url-pattern>
     </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>userTopicServlet</servlet-name>
+    <url-pattern>/user-topic</url-pattern>
+  </servlet-mapping>
 </web-app>
