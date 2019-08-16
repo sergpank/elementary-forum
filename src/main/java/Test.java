@@ -10,9 +10,11 @@ public class Test
 
     UserDao dao = new UserDao();
     //System.out.println(dao.getById(7));
-    List<User> users = dao.getByLogin("Barsa");
+   /* List<User> users = dao.getByLogin("Barsa");
     for (int i = 0; i < users.size(); i++) {
       System.out.println(users.get(i));
-    }
+    }*/
+    System.out.println(dao.thereIs("Bars"));
+    System.out.println(dao.thereIs("Barsa"));
   }
 }

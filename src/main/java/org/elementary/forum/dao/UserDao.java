@@ -5,6 +5,7 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.CriteriaQuery;
+import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 
 
@@ -66,5 +67,20 @@ public class UserDao
     session.close();
 
     return users;
+  }
+  public boolean thereIs(String login){
+    Session session = HibernateUtil.getSessionFactory().openSession();
+    Criteria crit = session.createCriteria(User.class);
+    crit.add(Restrictions.eq("login",login));
+   // crit.setProjection(Projections.rowCount());
+    List<User> results = crit.list();
+    boolean rez;
+    if (results.size() == 0)
+      rez = false;
+    else
+      rez = true;
+    session.close();
+
+    return rez;
   }
 }

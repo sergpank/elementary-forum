@@ -1,16 +1,19 @@
 <!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
     <title>Registration</title>
 </head>
 <body>
-<form method="GET" action="registration">
+<form method="POST" action="registration">
     Enter your name:
     <input type="text" name="userName"><br>
     Enter your password:
     <input type="text" name="password"><br>
 
     <input type="submit" value="registration">
+
+    <% out.println("User with this login already exists!\n" + "Try again"); %>
 
 </form>
 </body>

@@ -15,17 +15,29 @@ import java.util.Date;
 
 public class RegServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException
     {
         String name = req.getParameter("userName");
         String password = req.getParameter("password");
-        User user = new User();
-        user.setLogin(name);
-        user.setPassword(password);
-        user.setRegistrationDate(new Date());
+
         UserDao userDao = new UserDao();
-        //userDao.save(user);
-        
+
+        if (!userDao.thereIs(name))
+        {
+            User user = new User();
+            user.setLogin(name);
+            user.setPassword(password);
+            user.setRegistrationDate(new Date());
+            userDao.save(user);
+            PrintWriter out = resp.getWriter();
+            out.println("Registration successful");
+        }else {
+            RequestDispatcher view = req.getRequestDispatcher("reregistration.jsp");
+            PrintWriter out = resp.getWriter();
+            out.println("User with this login already exists!\n" +
+                "Try again");
+            view.forward(req, resp);
+        }
     }
 }
