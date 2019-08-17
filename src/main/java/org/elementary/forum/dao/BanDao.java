@@ -27,12 +27,13 @@ public class BanDao
     return ban;
   }
 
+
   public Ban delete(Ban ban)
   {
-
     SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
     Session session = sessionFactory.openSession();
     session.beginTransaction();
+
     session.delete(ban);
     session.getTransaction().commit();
     session.close();

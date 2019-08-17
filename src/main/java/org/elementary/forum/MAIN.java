@@ -16,6 +16,12 @@ public class MAIN
 {
   public static void main(String[] args)
   {
+    //fillDB();
+  }
+
+  public static void fillDB()
+  {
+
     UserDao userDao = new UserDao();
     TopicDao topicDao = new TopicDao();
     BanDao banDao = new BanDao();
@@ -37,24 +43,24 @@ public class MAIN
       topic.setDateCreated(new Date());
       topic.setTitle("Topic-" + i);
 
-        List<Post> posts = new ArrayList<>();
-        for (int j = 1; j <= 10; j++)
-        {
-            final Post post = new Post();
-            post.setAuthorId(j);
-            post.setTopic(topic);
-            post.setDateCreated(new Date());
-            post.setText("post " + j + " text ... la-la-la");
-            posts.add(post);
-        }
+      List<Post> posts = new ArrayList<>();
+      for (int j = 1; j <= 10; j++)
+      {
+        final Post post = new Post();
+        post.setAuthorId(j);
+        post.setTopic(topic);
+        post.setDateCreated(new Date());
+        post.setText("post " + j + " text ... la-la-la");
+        posts.add(post);
+      }
 
-        topic.setPosts(posts);
+      topic.setPosts(posts);
 
       topicDao.save(topic);
     }
-    Ban ban = new Ban("user-3", "spam");
+    Ban ban = new Ban("user-2", "spam");
     banDao.save(ban);
-    ban = new Ban("user-2", "retard");
+    ban = new Ban("user-4", "retard");
     banDao.save(ban);
   }
 

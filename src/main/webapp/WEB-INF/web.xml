@@ -21,8 +21,23 @@
   </servlet>
 
   <servlet>
+    <servlet-name>showAllUsers</servlet-name>
+    <servlet-class>org.elementary.forum.servlets.ShowAllUsersServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>showBannedUsers</servlet-name>
+    <servlet-class>org.elementary.forum.servlets.ShowBannedUsersServlet</servlet-class>
+  </servlet>
+
+  <servlet>
     <servlet-name>ban</servlet-name>
     <servlet-class>org.elementary.forum.servlets.BanServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>unlock</servlet-name>
+    <servlet-class>org.elementary.forum.servlets.UnlockServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
@@ -41,8 +56,25 @@
   </servlet-mapping>
 
   <servlet-mapping>
+    <servlet-name>showAllUsers</servlet-name>
+    <url-pattern>/ShowAllUsers</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>showBannedUsers</servlet-name>
+    <url-pattern>/ShowBannedUsers</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet-mapping>
     <servlet-name>ban</servlet-name>
-    <url-pattern>/ban</url-pattern>
+    <url-pattern>/Ban</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet-mapping>
+    <servlet-name>unlock</servlet-name>
+    <url-pattern>/Unlock</url-pattern>
   </servlet-mapping>
 
 

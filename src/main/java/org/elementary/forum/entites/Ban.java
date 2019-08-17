@@ -63,9 +63,7 @@ public class Ban
   @Override
   public String toString()
   {
-    return "Ban{" +
-        "id=" + id +
-        ", login='" + login + '\'' +
+    return "BannedUser{login='" + login + '\'' +
         ", reason='" + reason + '\'' +
         '}';
   }

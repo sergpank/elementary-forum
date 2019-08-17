@@ -10,15 +10,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class BanServlet extends HttpServlet
+public class UnlockServlet extends HttpServlet
 {
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
   {
     PrintWriter writer = resp.getWriter();
-    BanDao banDao = new BanDao();
-    Ban ban = new Ban(req.getParameter("login"), req.getParameter("reason"));
-    banDao.save(ban);
-    writer.println("DONE");
+
+    writer.println("NOTHING IS DONE");
   }
 }
