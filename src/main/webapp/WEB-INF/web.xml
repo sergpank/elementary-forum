@@ -5,6 +5,16 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
+    <servlet>
+        <servlet-name>sessionDemo</servlet-name>
+        <servlet-class>org.elementary.forum.servlets.SessionDemo</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>cookieDemo</servlet-name>
+        <servlet-class>org.elementary.forum.servlets.CookieDemo</servlet-class>
+    </servlet>
+
   <servlet>
     <servlet-name>simple</servlet-name>
     <servlet-class>org.elementary.forum.SimpleServlet</servlet-class>
@@ -21,6 +31,7 @@
   </servlet>
 
   <servlet>
+<<<<<<< HEAD
     <servlet-name>showAllUsers</servlet-name>
     <servlet-class>org.elementary.forum.servlets.ShowAllUsersServlet</servlet-class>
   </servlet>
@@ -38,6 +49,15 @@
   <servlet>
     <servlet-name>unlock</servlet-name>
     <servlet-class>org.elementary.forum.servlets.UnlockServlet</servlet-class>
+=======
+    <servlet-name>createPost</servlet-name>
+    <servlet-class>org.elementary.forum.servlets.CreatePostServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>newTopic</servlet-name>
+    <servlet-class>org.elementary.forum.servlets.NewTopicCreatorServlet</servlet-class>
+>>>>>>> 635233c0c37fc299ee743bf97a4b4201d268e061
   </servlet>
 
   <servlet-mapping>
@@ -54,7 +74,16 @@
     <servlet-name>topics</servlet-name>
     <url-pattern>/topics</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>createPost</servlet-name>
+    <url-pattern>/pages/createPost</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>newTopic</servlet-name>
+    <url-pattern>/new_topic</url-pattern>
+  </servlet-mapping>
 
+<<<<<<< HEAD
   <servlet-mapping>
     <servlet-name>showAllUsers</servlet-name>
     <url-pattern>/ShowAllUsers</url-pattern>
@@ -78,4 +107,14 @@
   </servlet-mapping>
 
 
+=======
+    <servlet-mapping>
+        <servlet-name>sessionDemo</servlet-name>
+        <url-pattern>/demo/sessionDemo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>cookieDemo</servlet-name>
+        <url-pattern>/demo/cookieDemo</url-pattern>
+    </servlet-mapping>
+>>>>>>> 635233c0c37fc299ee743bf97a4b4201d268e061
 </web-app>
