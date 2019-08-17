@@ -1,50 +1,48 @@
 package org.elementary.forum.dao;
 
-import org.elementary.forum.entites.Topic;
+import org.elementary.forum.entites.Post;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 
 import java.util.List;
 
-public class TopicDao
+public class PostDao
 {
-  public Topic getById(long id)
+  public Post getById(long id)
   {
     SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
     Session session = sessionFactory.openSession();
 
-    Topic topic = session.get(Topic.class, id);
+    Post post = session.get(Post.class, id);
     session.close();
 
-    return topic;
+    return post;
   }
 
-  public Topic save(Topic topic)
+  public Post save(Post post)
   {
     SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
     Session session = sessionFactory.openSession();
 
-    Transaction transaction = session.getTransaction();
+    session.beginTransaction();
 
     // SAVE HERE
-    session.save(topic);
+    session.save(post);
 
-    transaction.commit();
-
+    session.getTransaction().commit();
     session.close();
 
-    return topic;
+    return post;
   }
 
-  public List<Topic> loadAll()
+  public List<Post> loadAll()
   {
     Session session = HibernateUtil.getSessionFactory().openSession();
 
-    List<Topic> topics = session.createQuery("from Topic").list();
+    List<Post> posts = session.createQuery("from Post").list();
 
     session.close();
 
-    return topics;
+    return posts;
   }
 }

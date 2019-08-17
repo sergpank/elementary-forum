@@ -21,6 +21,16 @@
   </servlet>
 
   <servlet>
+    <servlet-name>createPost</servlet-name>
+    <servlet-class>org.elementary.forum.servlets.CreatePostServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>newTopic</servlet-name>
+    <servlet-class>org.elementary.forum.servlets.NewTopicCreatorServlet</servlet-class>
+  </servlet>
+
+  <servlet>
     <servlet-name>showAllUsers</servlet-name>
     <servlet-class>org.elementary.forum.servlets.ShowAllUsersServlet</servlet-class>
   </servlet>
@@ -78,4 +88,21 @@
   </servlet-mapping>
 
 
+  <servlet-mapping>
+    <servlet-name>createPost</servlet-name>
+    <url-pattern>/pages/createPost</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>newTopic</servlet-name>
+    <url-pattern>/new_topic</url-pattern>
+  </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>sessionDemo</servlet-name>
+        <url-pattern>/demo/sessionDemo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>cookieDemo</servlet-name>
+        <url-pattern>/demo/cookieDemo</url-pattern>
+    </servlet-mapping>
 </web-app>
