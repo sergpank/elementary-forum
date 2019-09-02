@@ -21,6 +21,7 @@
 <!--      <property name="hibernate.bytecode.use_reflection_optimizer" value="false" />-->
 <!--      <property name="connection.pool_size" value="1" />-->
 
+      <property name="hibernate.show_sql" value="false"/>
       <property name="hibernate.format_sql" value="true"/>
       <property name="hibernate.use_sql_comments" value="true"/>
 <!--      <property name="javax.persistence.schema-generation.database.creation" value="drop-and-create"/>-->
