@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>elementary</groupId>
-    <artifactId>forum</artifactId>
+    <artifactId>elementary-forum</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
 
-    <name>forum Maven Webapp</name>
+    <name>elementary-forum</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -45,6 +45,12 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
+            <version>5.4.3.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
             <version>5.4.3.Final</version>
         </dependency>
 

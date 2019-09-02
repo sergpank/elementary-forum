@@ -1,8 +1,8 @@
 <%@ page import="java.util.List" %>
-<%@ page import="org.elementary.forum.dao.UserDao" %>
-<%@ page import="org.elementary.forum.entites.User" %>
-<%@ page import="org.elementary.forum.dao.TopicDao" %>
-<%@ page import="org.elementary.forum.entites.Topic" %>
+<%@ page import="org.elementary.forum.dao.hibernate.UserDao" %>
+<%@ page import="org.elementary.forum.entities.User" %>
+<%@ page import="org.elementary.forum.dao.hibernate.TopicDao" %>
+<%@ page import="org.elementary.forum.entities.Topic" %>
 <%@ page import="java.util.Date" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%--<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>--%>

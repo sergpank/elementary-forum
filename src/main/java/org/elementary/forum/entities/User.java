@@ -1,10 +1,9 @@
-package org.elementary.forum.entites;
+package org.elementary.forum.entities;
 
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "users")

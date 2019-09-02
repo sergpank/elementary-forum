@@ -1,4 +1,4 @@
-package org.elementary.forum.entites;
+package org.elementary.forum.entities;
 import javax.persistence.*;
 
 @Entity

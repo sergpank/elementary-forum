@@ -1,12 +1,12 @@
-package org.elementary.forum.dao;
+package org.elementary.forum.dao.hibernate;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import org.elementary.forum.entites.Ban;
-import org.elementary.forum.entites.Post;
-import org.elementary.forum.entites.Topic;
-import org.elementary.forum.entites.User;
+import org.elementary.forum.entities.Ban;
+import org.elementary.forum.entities.Post;
+import org.elementary.forum.entities.Topic;
+import org.elementary.forum.entities.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;

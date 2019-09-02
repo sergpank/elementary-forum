@@ -1,9 +1,9 @@
 package org.elementary.forum.servlets;
 
-import org.elementary.forum.dao.PostDao;
-import org.elementary.forum.dao.TopicDao;
-import org.elementary.forum.entites.Post;
-import org.elementary.forum.entites.Topic;
+import org.elementary.forum.dao.hibernate.PostDao;
+import org.elementary.forum.dao.hibernate.TopicDao;
+import org.elementary.forum.entities.Post;
+import org.elementary.forum.entities.Topic;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

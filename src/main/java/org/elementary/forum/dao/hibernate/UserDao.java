@@ -1,17 +1,26 @@
-package org.elementary.forum.dao;
+package org.elementary.forum.dao.hibernate;
 
-import org.elementary.forum.entites.Ban;
-import org.elementary.forum.entites.User;
+import org.elementary.forum.entities.User;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class BanDao
+public class UserDao
 {
-  public Ban save(Ban ban)
+  public User getById(long id)
+  {
+    SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+    Session session = sessionFactory.openSession();
+
+    User user = session.get(User.class, id);
+    session.close();
+
+    return user;
+  }
+
+  public User save(User user)
   {
     SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
     Session session = sessionFactory.openSession();
@@ -19,34 +28,26 @@ public class BanDao
     session.beginTransaction();
 
     // SAVE HERE
-    session.saveOrUpdate(ban);
+    session.saveOrUpdate(user);
 
     session.getTransaction().commit();
     session.close();
 
-    return ban;
+    return user;
   }
 
-
-  public Ban delete(Ban ban)
-  {
-    SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-    Session session = sessionFactory.openSession();
-    session.beginTransaction();
-
-    session.delete(ban);
-    session.getTransaction().commit();
-    session.close();
-    return ban;
-  }
-
-  public List<Ban> loadAll()
+  public List<User> loadAll()
   {
     Session session = HibernateUtil.getSessionFactory().openSession();
-    List<Ban> banned = session.createQuery("from Ban").list();
+
+    Criteria criteria = session.createCriteria(User.class);
+    criteria.setFetchSize(1);
+    List users = criteria.list();
+    criteria.uniqueResult();
+//    List users = session.createQuery("from User").list();
 
     session.close();
 
-    return banned;
+    return users;
   }
 }

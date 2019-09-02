@@ -1,7 +1,7 @@
 package org.elementary.forum.servlets;
 
-import org.elementary.forum.dao.TopicDao;
-import org.elementary.forum.entites.Topic;
+import org.elementary.forum.dao.hibernate.TopicDao;
+import org.elementary.forum.entities.Topic;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

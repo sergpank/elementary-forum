@@ -1,8 +1,5 @@
 package org.elementary.forum.servlets;
 
-import org.elementary.forum.dao.BanDao;
-import org.elementary.forum.entites.Ban;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

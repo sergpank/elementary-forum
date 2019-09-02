@@ -1,9 +1,7 @@
 package org.elementary.forum.servlets;
 
-import org.elementary.forum.dao.BanDao;
-import org.elementary.forum.dao.UserDao;
-import org.elementary.forum.entites.Ban;
-import org.elementary.forum.entites.User;
+import org.elementary.forum.dao.hibernate.UserDao;
+import org.elementary.forum.entities.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

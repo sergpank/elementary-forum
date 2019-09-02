@@ -8,9 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.elementary.forum.dao.TopicDao;
-import org.elementary.forum.entites.Post;
-import org.elementary.forum.entites.Topic;
+import org.elementary.forum.dao.hibernate.TopicDao;
+import org.elementary.forum.entities.Post;
+import org.elementary.forum.entities.Topic;
 
 public class TopicPostsServlet extends HttpServlet
 {

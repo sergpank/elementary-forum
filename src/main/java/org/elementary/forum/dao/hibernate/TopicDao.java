@@ -1,6 +1,6 @@
-package org.elementary.forum.dao;
+package org.elementary.forum.dao.hibernate;
 
-import org.elementary.forum.entites.Topic;
+import org.elementary.forum.entities.Topic;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;

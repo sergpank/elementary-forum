@@ -1,7 +1,7 @@
 package org.elementary.forum.servlets;
 
-import org.elementary.forum.dao.BanDao;
-import org.elementary.forum.entites.Ban;
+import org.elementary.forum.dao.hibernate.BanDao;
+import org.elementary.forum.entities.Ban;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
