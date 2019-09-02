@@ -1,6 +1,6 @@
 package org.elementary.forum.servlets;
 
-import org.elementary.forum.dao.hibernate.PostDao;
+import org.elementary.forum.bo.PostBO;
 import org.elementary.forum.dao.hibernate.TopicDao;
 import org.elementary.forum.entities.Post;
 import org.elementary.forum.entities.Topic;
@@ -21,7 +21,7 @@ public class CreatePostServlet extends HttpServlet
     RequestDispatcher view = req.getRequestDispatcher("/pages/createPost.jsp");
 
     TopicDao topicDao = new TopicDao();
-    PostDao postDao = new PostDao();
+    PostBO postBO = new PostBO();
 
     Topic topic = topicDao.getById(1);
 
@@ -38,7 +38,7 @@ public class CreatePostServlet extends HttpServlet
 
     //topicDao.save(topic);
 
-    postDao.save(post);
+    postBO.save(post);
 
 
     view.forward(req, resp);

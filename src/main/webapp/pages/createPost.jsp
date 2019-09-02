@@ -5,7 +5,6 @@
 <%@ page import="org.elementary.forum.entities.Post"%>
 <%@ page import="org.elementary.forum.entities.Topic"%>
 <%@ page import="org.elementary.forum.dao.hibernate.TopicDao"%>
-<%@ page import="org.elementary.forum.dao.hibernate.PostDao"%>
 
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%--<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>--%>

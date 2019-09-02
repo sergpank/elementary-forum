@@ -18,7 +18,7 @@ public class JpaPostDao
         return post;
     }
 
-    public void save(Post p)
+    public Post save(Post p)
     {
         EntityManager em = JpaUtil.getEntityManager();
 
@@ -27,6 +27,8 @@ public class JpaPostDao
         em.getTransaction().commit();
 
         em.close();
+
+        return p;
     }
 
     public List<Post> loadAll(Long topicId)
