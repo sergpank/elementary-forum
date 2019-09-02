@@ -13,7 +13,7 @@
   </Appenders>
 
   <Loggers>
-    <Root level="trace"
+    <Root level="info"
           includelocation="true"
           additivity="false">
       <AppenderRef ref="Console"/>
