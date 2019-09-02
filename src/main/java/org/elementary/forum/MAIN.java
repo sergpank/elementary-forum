@@ -53,10 +53,5 @@ public class MAIN
     }
 
     topicDao.loadAll().forEach(System.out::println);
-
-    Topic topic = topicDao.getById(1);
-
-    System.out.println(topic);
-
   }
 }
