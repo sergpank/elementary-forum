@@ -26,6 +26,7 @@ public class TopicDao
     Session session = sessionFactory.openSession();
 
     Transaction transaction = session.getTransaction();
+    transaction.begin();
 
     // SAVE HERE
     session.save(topic);
@@ -41,7 +42,7 @@ public class TopicDao
   {
     Session session = HibernateUtil.getSessionFactory().openSession();
 
-    List<Topic> topics = session.createQuery("from Topic").list();
+    List<Topic> topics = (List<Topic>)session.createQuery("from Topic").list();
 
     session.close();
 

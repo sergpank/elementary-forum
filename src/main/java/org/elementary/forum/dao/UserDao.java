@@ -41,7 +41,9 @@ public class UserDao
     Session session = HibernateUtil.getSessionFactory().openSession();
 
     Criteria criteria = session.createCriteria(User.class);
+    criteria.setFetchSize(1);
     List users = criteria.list();
+    criteria.uniqueResult();
 //    List users = session.createQuery("from User").list();
 
     session.close();

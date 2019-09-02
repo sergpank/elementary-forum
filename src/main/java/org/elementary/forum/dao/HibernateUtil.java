@@ -10,11 +10,15 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
+import javax.persistence.EntityManagerFactory;
+
 public class HibernateUtil
 {
   private static final Logger log = LogManager.getLogger(HibernateUtil.class);
 
   private static SessionFactory sessionFactory;
+
+  private static EntityManagerFactory entityManagerFactory;
 
   public static SessionFactory getSessionFactory()
   {
@@ -41,4 +45,12 @@ public class HibernateUtil
     }
     return sessionFactory;
   }
+
+//  public static EntityManagerFactory getEntityManagerFactory()
+//  {
+//    if (entityManagerFactory == null)
+//    {
+//
+//    }
+//  }
 }

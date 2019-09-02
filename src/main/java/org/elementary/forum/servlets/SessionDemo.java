@@ -41,20 +41,22 @@ public class SessionDemo extends HttpServlet
         String docType = "<!DOCTYPE html>";
 
         writer.println(docType + "<html>" +
-                               "<head>" +
-                               "<title>" + title +
-                               "</title>" +
-                               "</head>" +
-                               "<body>" +
-                               "<h1>" + message + "</h1>" +
-                               "<h1>Session Details</h1>" +
-                               "Session ID:" + sessionId +
-                               "<br/>" +
-                               "Created: " + sessionCreationDate +
-                               "<br/>" +
-                               "Last Accessed Date: " + lastSessionAccess +
-                               "<br/>" +
-                               "User ID: " + userId);
+            "<head>" +
+            "<title>" + title +
+            "</title>" +
+            "</head>" +
+            "<body>" +
+            "<h1>" + message + "</h1>" +
+            "<h1>Session Details</h1>" +
+            "Session ID:" + sessionId +
+            "<br/>" +
+            "Created: " + sessionCreationDate +
+            "<br/>" +
+            "Last Accessed Date: " + lastSessionAccess +
+            "<br/>" +
+            "IS NEW : " + session.isNew() +
+            "<br/>" +
+            "User ID: " + userId);
 
         Cookie[] cookies = request.getCookies();
 
