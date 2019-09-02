@@ -19,8 +19,6 @@ public class HibernateUtil
 
   private static SessionFactory sessionFactory;
 
-  private static EntityManagerFactory entityManagerFactory;
-
   public static SessionFactory getSessionFactory()
   {
     if(sessionFactory == null)
