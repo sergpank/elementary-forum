@@ -22,9 +22,14 @@ public class TopicsServlet extends HttpServlet
     TopicDao dao = new TopicDao();
     List<Topic> topics = dao.loadAll();
 
+    req.setAttribute("topics", topics);
+
     for(Topic t : topics)
     {
       writer.printf("<h1>%d : %s</h1>\n", t.getId(), t.getTitle());
     }
+
+//    RequestDispatcher view = req.getRequestDispatcher("createNewTopic.jsp");
+//    view.forward(req, resp);
   }
 }
