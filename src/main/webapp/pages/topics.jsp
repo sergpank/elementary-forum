@@ -1,11 +1,27 @@
+<%@ page import="org.elementary.forum.entities.Topic" %>
+<%@ page import="org.elementary.forum.dao.jpa.JpaTopicDao" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
+
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 
 <html>
 <head>
     <meta charset="UTF-8">
-</head>
-<body>
 
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        table, td, th {
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
 
 <%--<%--%>
 <%--    List<Topic> topics = new JpaTopicDao().loadAll();--%>
@@ -30,9 +46,12 @@
         </thead>
         <tbody>
             <c:forEach items="${topics}" var="topic">
+                <c:url value="/posts" var="topicURL">
+                    <c:param name="tid" value="${topic.id}"/>
+                </c:url>
                 <tr>
                     <td>${topic.id}</td>
-                    <td>${topic.title}</td>
+                    <td><a href="${topicURL}">${topic.title}</a></td>
                     <td>${topic.dateCreated}</td>
                 </tr>
             </c:forEach>
